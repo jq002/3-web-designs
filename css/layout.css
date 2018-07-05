@@ -1,0 +1,70 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 62.5%;
+  text-align: center;
+}
+.hero {
+  max-width: 100em;
+  margin: 0 auto;
+  background: url('/images/bg3.jpg');
+  background-size: cover;
+  color: #ffffff;
+}
+.hero header img {
+  width: 5em;
+  height: 2em;
+  float: left;
+  margin: 1em 0 0 3em;
+}
+.hero header ul {
+  float: right;
+  list-style-type: none;
+}
+.hero header ul li {
+  float: left;
+  margin: 0 .5em;
+  padding: 1em;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+.hero header ul li:last-child {
+  border: 1px solid #ffffff;
+}
+.hero header:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.hero h1 {
+  font-size: 4em;
+  padding: 1em 0 .5em 0;
+}
+.hero h2 {
+  font-size: 2em;
+}
+.hero form {
+  padding: 2em 0 4em 0;
+}
+.hero form input[type="text"] {
+  padding: 1em;
+  border: 0;
+  width: 18em;
+  border-radius: 2px 0 0 2px;
+  opacity: .3;
+  background: #ffffff;
+}
+.hero form input[type="button"] {
+  color: #ffffff;
+  padding: 1em;
+  border: 0;
+  width: 6em;
+  border-radius: 0 2px 2px 0;
+  background-color: lightgreen;
+}

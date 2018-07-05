@@ -1,0 +1,71 @@
+
+@import url('base.less');
+
+body {
+    font-size: 62.5%;//16*0.625=10;但google最小12px;所以最终为12px字体
+    text-align: center;
+}
+.hero{
+    max-width: 100em;
+    margin: 0 auto;
+    background: url('/images/bg3.jpg');
+    background-size: cover;
+    color: @highlight-text-color;
+    
+    header {
+        img {
+            width: 5em;
+            height: 2em;
+            float: left;
+            margin: 1em 0 0 3em;
+        }
+        ul {
+            float: right;
+            list-style-type: none;
+            li {
+                float: left;
+                margin: 0 .5em;
+                padding: 1em;
+                border: 1px solid transparent;
+                border-radius: 2px;
+                &:last-child{
+                    border: 1px solid @highlight-text-color;
+                }
+            }
+        }
+        &:after {
+            content: "";
+            clear: both;
+            display: block;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+    }
+    h1{
+        font-size: 4em;
+        padding: 1em 0 .5em 0;
+    }
+    h2{
+        font-size: 2em;
+    }
+    form{
+        padding: 2em 0 4em 0;
+        input[type="text"]{
+            padding: 1em;
+            border: 0;
+            width: 18em;
+            border-radius: 2px 0 0 2px;
+            opacity: .3; 
+            background: @bg-color;
+        }
+        input[type="button"]{
+            color: @highlight-text-color;
+            padding: 1em;
+            border: 0;
+            width: 6em;
+            border-radius: 0 2px 2px 0;
+            background-color: lightgreen;
+        }
+    }
+}
