@@ -3,9 +3,38 @@ html {
   margin: 0;
   padding: 0;
 }
+/*============
+  删除间距
+  ==========*/
+dl,
+dd,
+ul,
+ol,
+li,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+blockquote,
+form,
+fieldset,
+legend,
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+}
 body {
   font-size: 62.5%;
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
 .hero {
   max-width: 100em;
@@ -13,6 +42,7 @@ body {
   background: url('/images/bg3.jpg');
   background-size: cover;
   color: #ffffff;
+  padding-bottom: 20em;
 }
 .hero header img {
   width: 5em;
@@ -45,6 +75,7 @@ body {
 .hero h1 {
   font-size: 4em;
   padding: 1em 0 .5em 0;
+  font-weight: bold;
 }
 .hero h2 {
   font-size: 2em;
@@ -58,7 +89,7 @@ body {
   width: 18em;
   border-radius: 2px 0 0 2px;
   opacity: .3;
-  background: #ffffff;
+  background: #efefef;
 }
 .hero form input[type="button"] {
   color: #ffffff;
@@ -66,5 +97,48 @@ body {
   border: 0;
   width: 6em;
   border-radius: 0 2px 2px 0;
-  background-color: lightgreen;
+  background-color: #6cdcac;
+  text-transform: uppercase;
+}
+.numbers {
+  width: 80%;
+  margin: 0 auto;
+}
+.numbers ul {
+  list-style-type: none;
+  position: relative;
+  top: -4em;
+  background-color: #efefef;
+}
+.numbers ul li {
+  float: left;
+  width: 25%;
+  box-sizing: border-box;
+  border: 1px solid #d9dada;
+  border-right: 0;
+}
+.numbers ul li:last-child {
+  border-right: 1px solid #d9dada;
+}
+.numbers ul li h2 {
+  font-size: 2em;
+  padding: 1em 0;
+}
+.numbers ul li h3 {
+  padding: 0 0 2em 0;
+}
+.numbers ul:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.how-it-works ul li {
+  float: left;
+  width: 33.33%;
+}
+.how-it-works ul li .number {
+  font-size: 2em;
 }
