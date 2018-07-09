@@ -135,10 +135,62 @@ body {
   overflow: hidden;
   visibility: hidden;
 }
+.how-it-works h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  padding: 1em 0;
+}
+.how-it-works h2::after {
+  display: block;
+  content: "";
+  background-color: #999999;
+  width: 2em;
+  height: .1em;
+  margin: .4em auto;
+}
+.how-it-works ul {
+  list-style-type: none;
+}
 .how-it-works ul li {
   float: left;
   width: 33.33%;
 }
+.how-it-works ul li::before {
+  display: block;
+  content: "";
+  background: #999999;
+  width: 'calc(100% - 1rem)';
+  height: 1px;
+  position: relative;
+  top: 4em;
+  left: 50%;
+  margin: 0 2em;
+}
+.how-it-works ul li:last-child::before {
+  display: none;
+}
 .how-it-works ul li .number {
   font-size: 2em;
+  color: #999999;
+  border: 1px solid #999999;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  display: block;
+  margin: 1em auto 2em auto;
+  padding: .4em;
+  border-radius: 100%;
+  background: #efefef;
+}
+.how-it-works ul li i {
+  font-size: 3.6em;
+}
+.how-it-works ul li .fa-address-card {
+  color: #eca95a;
+}
+.how-it-works ul li .fa-pen {
+  color: #ac9cd2;
+}
+.how-it-works ul li .fa-user-friends {
+  color: #4d99cb;
 }
