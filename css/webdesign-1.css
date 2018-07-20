@@ -1,0 +1,343 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+/*============
+  删除间距
+  ==========*/
+dl,
+dd,
+ul,
+ol,
+li,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+blockquote,
+form,
+fieldset,
+legend,
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  font-size: 62.5%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  max-width: 100em;
+  margin: 0 auto;
+  background: #f4f3f1;
+}
+.hero {
+  background: url('/images/bg3.jpg');
+  background-size: cover;
+  color: #ffffff;
+  padding-bottom: 20em;
+}
+.hero header img {
+  width: 5em;
+  height: 2em;
+  float: left;
+  margin: 1em 0 0 3em;
+}
+.hero header ul {
+  float: right;
+  list-style-type: none;
+}
+.hero header ul li {
+  float: left;
+  margin: 0 .5em;
+  padding: 1em;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+.hero header ul li:last-child {
+  border: 1px solid #ffffff;
+}
+.hero header:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.hero h1 {
+  font-size: 4em;
+  padding: 1em 0 .5em 0;
+  font-weight: bold;
+}
+.hero h2 {
+  font-size: 2em;
+}
+.hero form {
+  padding: 2em 0 4em 0;
+}
+.hero form input[type="text"] {
+  padding: 1em;
+  border: 0;
+  width: 18em;
+  border-radius: 2px 0 0 2px;
+  opacity: .3;
+}
+.hero form input[type="button"] {
+  color: #ffffff;
+  padding: 1em;
+  border: 0;
+  width: 6em;
+  border-radius: 0 2px 2px 0;
+  background-color: #67ddab;
+  text-transform: uppercase;
+}
+.numbers {
+  width: 80%;
+  margin: 0 auto;
+}
+.numbers ul {
+  list-style-type: none;
+  position: relative;
+  top: -4em;
+  background: #f4f3f1;
+}
+.numbers ul li {
+  float: left;
+  width: 25%;
+  box-sizing: border-box;
+  border: 1px solid #d9dada;
+  border-right: 0;
+}
+.numbers ul li:last-child {
+  border-right: 1px solid #d9dada;
+}
+.numbers ul li h2 {
+  font-size: 2em;
+  padding: 1em 0 .3em;
+  color: #373d4b;
+}
+.numbers ul li h3 {
+  padding: 0 0 2em 0;
+  color: #60677a;
+}
+.numbers ul:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.how-it-works {
+  padding-bottom: 6em;
+  border-bottom: 1px solid #d9dada;
+}
+.how-it-works h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  padding: 1em 0;
+}
+.how-it-works h2::after {
+  display: block;
+  content: "";
+  background-color: #d9dada;
+  width: 2em;
+  height: .1em;
+  margin: .4em auto;
+}
+.how-it-works ul {
+  list-style-type: none;
+}
+.how-it-works ul li {
+  float: left;
+  width: 33.33%;
+}
+.how-it-works ul li::before {
+  display: block;
+  content: "";
+  background: #d9dada;
+  width: 'calc(100% - 1rem)';
+  height: 1px;
+  position: relative;
+  top: 4em;
+  left: 50%;
+  margin: 0 2em;
+}
+.how-it-works ul li:last-child::before {
+  display: none;
+}
+.how-it-works ul li .number {
+  font-size: 2em;
+  color: #9499a6;
+  border: 1px solid #d9dada;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  display: block;
+  margin: 1em auto 2em auto;
+  padding: .4em;
+  border-radius: 100%;
+}
+.how-it-works ul li i {
+  font-size: 3.6em;
+}
+.how-it-works ul li .fa-address-card {
+  color: #eca95a;
+}
+.how-it-works ul li .fa-pen {
+  color: #ac9cd2;
+}
+.how-it-works ul li .fa-user-friends {
+  color: #4d99cb;
+}
+.how-it-works ul li h3 {
+  color: #60677a;
+  margin: 1em 0 .5em;
+}
+.how-it-works ul li p {
+  color: #9499a6;
+  margin: 0 6em;
+  line-height: 1.5;
+}
+.how-it-works ul:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.why-choose-us {
+  padding-bottom: 6em;
+  border-bottom: 1px solid #d9dada;
+}
+.why-choose-us h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  padding: 1em 0;
+}
+.why-choose-us h2::after {
+  display: block;
+  content: "";
+  background-color: #d9dada;
+  width: 2em;
+  height: .1em;
+  margin: .4em auto;
+}
+.why-choose-us ul li {
+  float: left;
+  width: 50%;
+}
+.why-choose-us ul li .detail {
+  margin: 1em 9em;
+  position: relative;
+  text-align: left;
+}
+.why-choose-us ul li .detail i {
+  position: absolute;
+  left: 0;
+  font-size: 30px;
+}
+.why-choose-us ul li .detail .fa-check {
+  color: #66be93;
+}
+.why-choose-us ul li .detail .fa-brush {
+  color: #01b4ea;
+}
+.why-choose-us ul li .detail .fa-circle-notch {
+  color: #eca95a;
+}
+.why-choose-us ul li .detail .fa-user-alt {
+  color: #af7ac4;
+}
+.why-choose-us ul li .detail .fa-bookmark {
+  color: #f26d7e;
+}
+.why-choose-us ul li .detail .fa-thumbs-up {
+  color: #ed7f5b;
+}
+.why-choose-us ul li .detail h3 {
+  margin-left: 60px;
+  color: #60677a;
+  margin-bottom: .5em;
+}
+.why-choose-us ul li .detail p {
+  margin-left: 60px;
+  color: #9499a6;
+  line-height: 1.5;
+}
+.why-choose-us ul:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.testimonial-feedback {
+  padding: 3em 3em 6em;
+}
+.testimonial-feedback .title input[type="button"] {
+  padding: 1em;
+  border: 0;
+  border-radius: 2px;
+  background-color: #60677a;
+  color: #ffffff;
+}
+.testimonial-feedback .content p {
+  color: #60677a;
+  margin: 2em 0;
+  font-size: 1.5em;
+}
+.testimonial-feedback .content p::after {
+  content: '';
+  border-bottom: 1px solid #9499a6;
+  width: 2em;
+  display: block;
+  margin: 1em auto;
+}
+.testimonial-feedback .content h4 {
+  color: #60677a;
+  font-size: 1.4em;
+}
+.testimonial-feedback .content h5 {
+  color: #9499a6;
+}
+.testimonial-feedback .content ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4em;
+}
+.testimonial-feedback .content ul li {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 1px solid #d9dada;
+  margin: 0 2em;
+}
+.testimonial-feedback .content ul li img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 5px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+.testimonial-feedback .content ul li img:hover {
+  filter: none;
+  opacity: 1;
+}
