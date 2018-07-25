@@ -289,12 +289,22 @@ body {
 .testimonial-feedback {
   padding: 3em 3em 6em;
 }
+.testimonial-feedback .title input[type="button"].active {
+  background-color: #60677a;
+  color: #ffffff;
+}
 .testimonial-feedback .title input[type="button"] {
   padding: 1em;
   border: 0;
   border-radius: 2px;
-  background-color: #60677a;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #60677a;
+}
+.testimonial-feedback .content > div {
+  display: none;
+}
+.testimonial-feedback .content .active {
+  display: block;
 }
 .testimonial-feedback .content p {
   color: #60677a;

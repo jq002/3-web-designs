@@ -282,16 +282,27 @@ body {
 .testimonial-feedback{
     padding: 3em 3em 6em;
     .title{
+        input[type="button"].active{
+
+            background-color: @secondy-text-color;
+            color: @highlight-text-color;      
+        }
         input[type="button"]{
             padding: 1em;
             border: 0;
             // width: 6em;
             border-radius:2px;
-            background-color: @secondy-text-color;
-            color: @highlight-text-color;            
+            background-color: @highlight-text-color;
+            color: @secondy-text-color; 
         }
     }
     .content{
+        &>div{
+            display: none;
+        }
+        .active{
+            display: block;
+        }
         
         p{
             color: @secondy-text-color;

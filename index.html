@@ -32,7 +32,7 @@
     <section class="numbers">
         <ul>
             <li>
-                <h2>20000</h2>
+                <h2>223000</h2>
                 <h3>Agents</h3>
             </li>
             <li>
@@ -66,7 +66,8 @@
                     <i class="fas fa-pen"></i>
                     <h3>Receive Proposals</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam voluptatibus est tempore optio! Dolore,
-                        iure!</p>
+                        iure!
+                    </p>
                 </div>
             </li>
             <li>
@@ -109,14 +110,16 @@
                 <div class="detail">
                     <i class="fas fa-user-alt"></i>
                     <h3>Independent</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi magni impedit aut vitae debitis itaque laborum! Nemo asperiores dolore totam non, mollitia laborum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi magni impedit aut vitae debitis itaque
+                        laborum! Nemo asperiores dolore totam non, mollitia laborum.</p>
                 </div>
             </li>
             <li>
                 <div class="detail">
                     <i class="far fa-bookmark"></i>
                     <h3>Comprehensive</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat corrupti dignissimos necessitatibus minus. Soluta.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat corrupti dignissimos necessitatibus
+                        minus. Soluta.</p>
                 </div>
             </li>
             <li>
@@ -129,24 +132,77 @@
         </ul>
     </section>
     <section class="testimonial-feedback">
-        <div class="title">
-            <input type="button" value="Testimonials">
+        <div class="title ">
+            <input type="button" value="Testimonials" class="active">
             <input type="button" value="Recent Feedbacks">
         </div>
         <div class="content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sint mollitia totam, odio quasi iure blanditiis voluptatibus, iste quis quos nesciunt ratione ducimus ut. Et culpa eius numquam ipsum beatae.</p>
-            <h4>John Mayer</h4>
-            <h5>Halcyon CEO</h5>
-            <ul>
-                <li><img src="./images/avater.jpg" alt="" srcset=""></li>
-                <li><img src="./images/avater.jpg" alt="" srcset=""></li>
-                <li><img src="./images/avater.jpg" alt="" srcset=""></li>
-            </ul>
+            <div class="active">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sint mollitia totam, odio quasi iure blanditiis
+                    voluptatibus, iste quis quos nesciunt ratione ducimus ut. Et culpa eius numquam ipsum beatae.</p>
+                <h4>John Mayer</h4>
+                <h5>Halcyon CEO</h5>
+                <ul>
+                    <li>
+                        <img src="./images/avater.jpg" alt="" srcset="">
+                    </li>
+                    <li>
+                        <img src="./images/avater.jpg" alt="" srcset="">
+                    </li>
+                    <li>
+                        <img src="./images/avater.jpg" alt="" srcset="">
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, eligendi?</p>
+                <h4>John Mayer</h4>
+                <h5>Halcyon CEO</h5>
+                <ul>
+                    <li>
+                        <img src="./images/logo.jpeg" alt="" srcset="">
+                    </li>
+                    <li>
+                        <img src="./images/logo.jpeg" alt="" srcset="">
+                    </li>
+                    <li>
+                        <img src="./images/logo.jpeg" alt="" srcset="">
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </section>
 
 
+    <script>
+        changeTab('.title','.content');
 
+        function changeTab(tab,tabContent) {
+            var tabs = document.querySelector(tab).children;
+            var tabContents = document.querySelector(tabContent).children;
+            for (var i = 0, len = tabs.length; i < len; i++) {
+                tabs[i].onclick = showTab;
+            }
+        }
+
+        function showTab(tab,tabContent) {
+            console.log(tab+'--'+tabContent)
+            var tabs = document.querySelector(tab).children;
+            var tabContents = document.querySelector(tabContent).children;
+            for (var i = 0, len = tabs.length; i < len; i++) {
+                if (tabs[i] === this) {
+                    tabs[i].classList.add('active');
+                    tabContents[i].classList.add('active');
+                } else {
+                    tabs[i].classList.remove('active');
+                    tabContents[i].classList.remove('active');
+                }
+            }
+
+        }
+    </script>
 
 
 </body>
