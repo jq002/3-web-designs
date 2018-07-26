@@ -131,31 +131,48 @@
             </li>
         </ul>
     </section>
-    <section class="testimonial-feedback">
+    <section class="testimonial-feedback" id="tab">
         <div class="title ">
-            <input type="button" value="Testimonials" class="active">
-            <input type="button" value="Recent Feedbacks">
+            <input type="button" value="Testimonials" class="tab-header">
+            <input type="button" value="Recent Feedbacks" class="tab-header">
         </div>
         <div class="content">
-            <div class="active">
+            <div class="tab-content" id="tab-2">
+                <div class="tab-content-2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sint mollitia totam, odio quasi iure
+                        blanditiis voluptatibus, iste quis quos nesciunt ratione ducimus ut. Et culpa eius numquam ipsum
+                        beatae.
+                    </p>
+                    <h4>John Mayer</h4>
+                    <h5>Halcyon CEO</h5>
+                </div>
+                <div class="tab-content-2">
+                    <p>Lorem7Ea et dolore laborum proident cupidatat occaecat labore ullamco laboris esse duis ullamco ut.
+                    </p>
+                    <h4>Dan Rorbinson</h4>
+                    <h5>Bicycle Boy</h5>
+                </div>
+                <div class="tab-content-2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sint mollitia totam, odio quasi iure
+                        blanditiis voluptatibus,
+                    </p>
+                    <h4>Eve</h4>
+                    <h5>beautiful Girl</h5>
+                </div>
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sint mollitia totam, odio quasi iure blanditiis
-                    voluptatibus, iste quis quos nesciunt ratione ducimus ut. Et culpa eius numquam ipsum beatae.</p>
-                <h4>John Mayer</h4>
-                <h5>Halcyon CEO</h5>
                 <ul>
-                    <li>
+                    <li class="tab-header-2">
                         <img src="./images/avater.jpg" alt="" srcset="">
                     </li>
-                    <li>
+                    <li class="tab-header-2">
                         <img src="./images/avater.jpg" alt="" srcset="">
                     </li>
-                    <li>
+                    <li class="tab-header-2">
                         <img src="./images/avater.jpg" alt="" srcset="">
                     </li>
                 </ul>
             </div>
-            <div>
+            <div class="tab-content">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, eligendi?</p>
                 <h4>John Mayer</h4>
                 <h5>Halcyon CEO</h5>
@@ -177,31 +194,46 @@
 
 
     <script>
-        changeTab('.title','.content');
-
-        function changeTab(tab,tabContent) {
-            var tabs = document.querySelector(tab).children;
-            var tabContents = document.querySelector(tabContent).children;
-            for (var i = 0, len = tabs.length; i < len; i++) {
-                tabs[i].onclick = showTab;
-            }
-        }
-
-        function showTab(tab,tabContent) {
-            console.log(tab+'--'+tabContent)
-            var tabs = document.querySelector(tab).children;
-            var tabContents = document.querySelector(tabContent).children;
-            for (var i = 0, len = tabs.length; i < len; i++) {
-                if (tabs[i] === this) {
-                    tabs[i].classList.add('active');
-                    tabContents[i].classList.add('active');
-                } else {
-                    tabs[i].classList.remove('active');
-                    tabContents[i].classList.remove('active');
+        // 问题太多无法吐槽
+        function qin_tab(opts) {
+            var defaults = {
+                activeName: 'active',
+                tabHeaderName: 'tab-header',
+                tabContentName: 'tab-content',
+                tabId: 'tab'
+            };
+            var Opts = Object.assign({}, defaults, opts);
+            var oLinks = document.getElementById(Opts.tabId).getElementsByClassName(Opts.tabHeaderName);
+            var oCons = document.getElementById(Opts.tabId).getElementsByClassName(Opts.tabContentName);
+            for (var i = 0; i < oLinks.length; i++) {
+                oLinks[i].index = i;
+                oLinks[i].onclick = function () {
+                    for (var j = 0; j < oLinks.length; j++) {
+                        oLinks[j].classList.remove(Opts.activeName);
+                        oCons[j].style.display = "none";
+                    }
+                    this.classList.add(Opts.activeName);
+                    oCons[this.index].style.display = "block";
                 }
-            }
 
+            }
         }
+
+        var btnClick = new Event('click');
+        qin_tab({
+            activeName: 'active',
+            tabHeaderName: 'tab-header',
+            tabContentName: 'tab-content',
+            tabId: 'tab'
+        });
+        document.querySelector('.tab-header').dispatchEvent(btnClick);
+        qin_tab({
+            activeName: 'active',
+            tabHeaderName: 'tab-header-2',
+            tabContentName: 'tab-content-2',
+            tabId: 'tab-2'
+        });
+        document.querySelector('.tab-header-2').dispatchEvent(btnClick);
     </script>
 
 
