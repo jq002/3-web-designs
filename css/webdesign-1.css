@@ -34,11 +34,14 @@ textarea {
 ul {
   list-style-type: none;
 }
+html {
+  background: #566473;
+}
 body {
   font-size: 62.5%;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  max-width: 100em;
+  width: 100em;
   margin: 0 auto;
   background: #f4f3f1;
 }
@@ -351,4 +354,47 @@ body {
 .testimonial-feedback .content ul li img.active {
   filter: none;
   opacity: 1;
+}
+.find-an-agent {
+  background: url('/images/airbus.jpg') center;
+  background-size: cover;
+  color: #ffffff;
+  line-height: 12em;
+}
+.find-an-agent form label {
+  font-size: 2em;
+  padding-right: 1em;
+}
+.find-an-agent form input[type="text"] {
+  padding: 1em;
+  border: 0;
+  width: 18em;
+  border-radius: 2px 0 0 2px;
+}
+.find-an-agent form input[type="button"] {
+  color: #ffffff;
+  padding: 1em;
+  border: 0;
+  width: 6em;
+  border-radius: 0 2px 2px 0;
+  background-color: #67ddab;
+  text-transform: uppercase;
+}
+footer {
+  line-height: 5em;
+}
+footer ul {
+  margin: 0 10em;
+  text-align: left;
+}
+footer ul li {
+  display: inline;
+  padding: 0 1em;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #9499a6;
+}
+footer ul li a:hover {
+  color: #60677a;
 }

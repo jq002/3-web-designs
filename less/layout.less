@@ -10,22 +10,18 @@
 ul{
     list-style-type: none;
 }
-
+html{
+    background: #566473;
+}
 body {
     font-size: 62.5%;//16*0.625=10;但google最小12px;所以最终为12px字体
     text-align: center;
     font-family: 'Open Sans', sans-serif;
-    max-width: 100em;
+    width: 100em;
     margin: 0 auto;
     background: @bg-color;
 }
-// section{
-//     max-width: 100em;
-//     margin: 0 auto;
-// }
 .hero{
-    // max-width: 100em;
-    // margin: 0 auto;
     background: url('/images/bg3.jpg');
     background-size: cover;
     color: @highlight-text-color;
@@ -350,6 +346,56 @@ body {
                         opacity: 1;
                     }          
                 }
+            }
+        }
+    }
+}
+
+.find-an-agent{
+    background: url('/images/airbus.jpg') center;
+    background-size: cover;
+    color: @highlight-text-color;
+    line-height: 12em;
+    form{
+        label{
+            font-size: 2em;
+            padding-right: 1em;
+        }
+        input[type="text"]{
+            padding: 1em;
+            border: 0;
+            width: 18em;
+            border-radius: 2px 0 0 2px;
+        }
+        input[type="button"]{
+            color: @highlight-text-color;
+            padding: 1em;
+            border: 0;
+            width: 6em;
+            border-radius: 0 2px 2px 0;
+            background-color: @button-color;
+            text-transform: uppercase;
+            
+        }
+    }
+}
+
+footer{
+    line-height: 5em;
+    
+    ul{
+        margin: 0 10em;
+        text-align: left;
+        li{
+            display: inline;
+            padding: 0 1em;
+            a{
+                text-decoration: none;
+                color: @third-text-color;
+                &:hover{
+                    color: @secondy-text-color;
+                }
+
             }
         }
     }
