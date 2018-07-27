@@ -161,30 +161,48 @@
                 </div>
 
                 <ul>
-                    <li class="tab-header-2">
-                        <img src="./images/avater.jpg" alt="" srcset="">
+                    <li>
+                        <img  class="tab-header-2" src="./images/avater.jpg" alt="" srcset="">
                     </li>
-                    <li class="tab-header-2">
-                        <img src="./images/avater.jpg" alt="" srcset="">
+                    <li>
+                        <img  class="tab-header-2" src="./images/avater.jpg" alt="" srcset="">
                     </li>
-                    <li class="tab-header-2">
-                        <img src="./images/avater.jpg" alt="" srcset="">
+                    <li >
+                        <img class="tab-header-2" src="./images/avater.jpg" alt="" srcset="">
                     </li>
                 </ul>
             </div>
-            <div class="tab-content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, eligendi?</p>
-                <h4>John Mayer</h4>
-                <h5>Halcyon CEO</h5>
+            <div class="tab-content"  id="tab-3">
+                <div class="tab-content-2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sint mollitia totam, odio quasi iure
+                        blanditiis voluptatibus, iste quis quos nesciunt ratione ducimus ut. Et culpa eius numquam ipsum
+                        beatae.
+                    </p>
+                    <h4>John Mayer</h4>
+                    <h5>Halcyon CEO</h5>
+                </div>
+                <div class="tab-content-2">
+                    <p>Lorem7Ea et dolore laborum proident cupidatat occaecat labore ullamco laboris esse duis ullamco ut.
+                    </p>
+                    <h4>Dan Rorbinson</h4>
+                    <h5>Bicycle Boy</h5>
+                </div>
+                <div class="tab-content-2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sint mollitia totam, odio quasi iure
+                        blanditiis voluptatibus,
+                    </p>
+                    <h4>Eve</h4>
+                    <h5>beautiful Girl</h5>
+                </div>
                 <ul>
                     <li>
-                        <img src="./images/logo.jpeg" alt="" srcset="">
+                        <img  class="tab-header-2" src="./images/logo.jpeg" alt="" srcset="">
                     </li>
                     <li>
-                        <img src="./images/logo.jpeg" alt="" srcset="">
+                        <img class="tab-header-2"  src="./images/logo.jpeg" alt="" srcset="">
                     </li>
                     <li>
-                        <img src="./images/logo.jpeg" alt="" srcset="">
+                        <img class="tab-header-2"  src="./images/logo.jpeg" alt="" srcset="">
                     </li>
                 </ul>
             </div>
@@ -200,40 +218,46 @@
                 activeName: 'active',
                 tabHeaderName: 'tab-header',
                 tabContentName: 'tab-content',
-                tabId: 'tab'
+                tabId: 'tab',
+                eventName:'click'
             };
             var Opts = Object.assign({}, defaults, opts);
             var oLinks = document.getElementById(Opts.tabId).getElementsByClassName(Opts.tabHeaderName);
             var oCons = document.getElementById(Opts.tabId).getElementsByClassName(Opts.tabContentName);
             for (var i = 0; i < oLinks.length; i++) {
                 oLinks[i].index = i;
-                oLinks[i].onclick = function () {
+                oLinks[i].addEventListener(Opts.eventName,function(){
                     for (var j = 0; j < oLinks.length; j++) {
                         oLinks[j].classList.remove(Opts.activeName);
                         oCons[j].style.display = "none";
                     }
                     this.classList.add(Opts.activeName);
                     oCons[this.index].style.display = "block";
-                }
+                })
 
             }
         }
 
         var btnClick = new Event('click');
-        qin_tab({
-            activeName: 'active',
-            tabHeaderName: 'tab-header',
-            tabContentName: 'tab-content',
-            tabId: 'tab'
-        });
-        document.querySelector('.tab-header').dispatchEvent(btnClick);
+        var imgMouseover = new Event('mouseover');
+        qin_tab();
+        document.getElementById('tab').querySelector('.tab-header').dispatchEvent(btnClick);
         qin_tab({
             activeName: 'active',
             tabHeaderName: 'tab-header-2',
             tabContentName: 'tab-content-2',
-            tabId: 'tab-2'
+            tabId: 'tab-2',
+            eventName:'mouseover'
         });
-        document.querySelector('.tab-header-2').dispatchEvent(btnClick);
+        document.getElementById('tab-2').querySelectorAll('.tab-header-2')[1].dispatchEvent(imgMouseover);
+        qin_tab({
+            activeName: 'active',
+            tabHeaderName: 'tab-header-2',
+            tabContentName: 'tab-content-2',
+            tabId: 'tab-3',
+            eventName:'mouseover'
+        });
+        document.getElementById('tab-3').querySelectorAll('.tab-header-2')[1].dispatchEvent(imgMouseover);
     </script>
 
 

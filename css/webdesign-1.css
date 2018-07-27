@@ -335,10 +335,6 @@ body {
   border: 1px solid #d9dada;
   margin: 0 2em;
 }
-.testimonial-feedback .content ul li.active img {
-  filter: none;
-  opacity: 1;
-}
 .testimonial-feedback .content ul li img {
   width: 100px;
   height: 100px;
@@ -347,4 +343,12 @@ body {
   object-fit: cover;
   filter: grayscale(100%);
   opacity: 0.6;
+}
+.testimonial-feedback .content ul li img:hover {
+  filter: none;
+  opacity: 1;
+}
+.testimonial-feedback .content ul li img.active {
+  filter: none;
+  opacity: 1;
 }

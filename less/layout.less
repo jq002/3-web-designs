@@ -331,13 +331,6 @@ body {
                 border-radius: 50%;
                 border: 1px solid @border-color;
                 margin: 0 2em;
-                &.active{
-                    img{
-                        filter: none;
-                        opacity: 1;
-                    }
-
-                }
                 img{
                     width: 100px;
                     height: 100px;
@@ -348,10 +341,14 @@ body {
                     opacity: 0.6;
 
 
-                    // &:hover{
-                    //     filter: none;
-                    //     opacity: 1;
-                    // }           
+                    &:hover{
+                        filter: none;
+                        opacity: 1;
+                    } 
+                    &.active{
+                        filter: none;
+                        opacity: 1;
+                    }          
                 }
             }
         }
